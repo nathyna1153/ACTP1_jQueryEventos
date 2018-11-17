@@ -42,6 +42,27 @@
 <body>
   <button class="add_name">+</button>
   <ul class="names"></ul>
+<script src="../_assets/js/jquery-3.3.1.min.js"></script>
+<script>
+
+  $(".add_name").on('click', function(e){
+    var val_prompt = prompt('Ingresa un valor para la lista', 'Item de ejemplo');
+    
+    $(".names").append('<li><span>' + val_prompt +'</span><a href="#" class="remove_name">  X  </a></li>');
+    
+    $('a[href="#"]').on('click', function(e){
+      e.preventDefault();
+    })
+
+    $(".remove_name").on('click', function(e){
+      $(this).parent().remove();
+    })
+  })
+
+
+
+
+</script>
 
 </body>
 </html>

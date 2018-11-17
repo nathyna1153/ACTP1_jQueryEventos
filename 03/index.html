@@ -60,6 +60,17 @@
 			<li><a href="#">link 9</a></li>
 		</ul>
 	</nav>
+<script src="../_assets/js/jquery-3.3.1.min.js"></script>
+<script>
 
+	var cuartoLink= $("li").eq(3);
+	var sextoLink= $("a:contains(link 6)");
+
+	cuartoLink.append('<ul><li><a href="#">link 4.a</a></li></ul>');
+	cuartoLink.before('<li><a href="#">link 3.5</a></li>');
+
+	sextoLink.prepend('😎');
+	sextoLink.after('🙂');
+</script>
 </body>
 </html>

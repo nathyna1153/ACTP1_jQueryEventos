@@ -112,5 +112,20 @@
     </li>
   </ul>
 
+  <script src="../_assets/js/jquery-3.3.1.min.js"></script>
+  <script>
+    $(".social__btn.social__like").click(function(e) {
+       $(this).toggleClass("social__like--clicked");
+       e.preventDefault();
+    });
+
+
+    $(".social__btn.social__link").click(function(e) {
+      alert($(this).parents(".meals__link").children('img').attr('alt'));
+      e.preventDefault();
+    });
+    
+  </script>
+
 </body>
 </html>
